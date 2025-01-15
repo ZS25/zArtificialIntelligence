@@ -7,3 +7,5 @@ GET http://localhost:8096/chat?message=what is the biggest province in Canada? B
 ###
 GET http://localhost:8096/chat?message=what is its area in kilometres? Be concise.
 
+###
+GET http://localhost:8096/chatstream?message=what is the biggest province in Canada?

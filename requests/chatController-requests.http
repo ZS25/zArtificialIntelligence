@@ -2,4 +2,8 @@
 GET http://localhost:8096/fact
 
 ###
-GET http://localhost:8096/chat?message=what are the cities in Ontario in Canada
+GET http://localhost:8096/chat?message=what is the biggest province in Canada? Be concise.
+
+###
+GET http://localhost:8096/chat?message=what is its area in kilometres? Be concise.
+

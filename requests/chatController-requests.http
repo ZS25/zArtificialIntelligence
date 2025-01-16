@@ -1,4 +1,7 @@
 ###
+GET http://localhost:8096/
+
+###
 GET http://localhost:8096/fact
 
 ###

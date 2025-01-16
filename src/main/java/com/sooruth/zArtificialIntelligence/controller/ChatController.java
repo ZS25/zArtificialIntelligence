@@ -1,6 +1,7 @@
 package com.sooruth.zArtificialIntelligence.controller;
 
 
+import com.sooruth.zArtificialIntelligence.record.BookRecord;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.memory.InMemoryChatMemory;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
+
+import java.awt.print.Book;
 
 @RestController
 public class ChatController {
@@ -26,6 +29,14 @@ public class ChatController {
                 .user("Tell me a random fact.")
                 .call()
                 .content();
+    }
+
+    @GetMapping("/book")
+    public BookRecord book() {
+        return chatClient.prompt()
+                .user("Give me a book recommendation on Java.  Limit the summary to 100 words.")
+                .call()
+                .entity(BookRecord.class);
     }
 
     @GetMapping("/chat")

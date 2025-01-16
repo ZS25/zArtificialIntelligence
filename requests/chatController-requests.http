@@ -2,6 +2,9 @@
 GET http://localhost:8096/fact
 
 ###
+GET http://localhost:8096/book
+
+###
 GET http://localhost:8096/chat?message=what is the biggest province in Canada? Be concise.
 
 ###
